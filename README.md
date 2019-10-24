@@ -6,10 +6,16 @@
 
 [Decaf](https://github.com/decaf-lang/decaf) is a Java-like, but much smaller programming language mainly for educational purpose. We now have at least three different implementations of the compiler in Java, Scala and Rust. Since the standard language has quite a limited set of language features, students are welcome to add their own new features.
 
+## Installation
+
+Install `jiegec/decaf-lsp` into your path.
+
 
 ## Features
 
 * Syntax highlighting
 * Autoclosing brackets/quotes
+* Syntax diagnostics
+* Document symbols
 
 ![](images/screenshot.png)
