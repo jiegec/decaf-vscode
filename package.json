@@ -3,37 +3,67 @@
     "displayName": "Decaf",
     "description": "Decaf language syntax highlighting for Visual Studio Code",
     "version": "0.1.0",
-	"preview": true,
-	"icon": "images/logo.png",
+    "preview": true,
+    "icon": "images/logo.png",
     "engines": {
         "vscode": "^1.39.0"
     },
-	"author": {
-		"name": "Yuekai Jia"
-	},
-	"publisher": "equation314",
+    "author": {
+        "name": "Yuekai Jia"
+    },
+    "publisher": "equation314",
     "categories": [
         "Programming Languages"
     ],
-	"keywords": [
-		"decaf",
-		"decaf-lang"
-	],
-	"repository": {
-		"url": "https://github.com/equation314/decaf-vscode",
-		"type": "git"
-	},
+    "keywords": [
+        "decaf",
+        "decaf-lang"
+    ],
+    "repository": {
+        "url": "https://github.com/equation314/decaf-vscode",
+        "type": "git"
+    },
+    "activationEvents": [
+        "onLanguage:decaf"
+    ],
+    "main": "./out/extension.js",
     "contributes": {
-        "languages": [{
-            "id": "decaf",
-            "aliases": ["Decaf", "decaf"],
-            "extensions": [".decaf"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "decaf",
-            "scopeName": "source.decaf",
-            "path": "./syntaxes/decaf.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "decaf",
+                "aliases": [
+                    "Decaf",
+                    "decaf"
+                ],
+                "extensions": [
+                    ".decaf"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "decaf",
+                "scopeName": "source.decaf",
+                "path": "./syntaxes/decaf.tmLanguage.json"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "tslint -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^5.2.1",
+        "which": "^2.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^10.14.17",
+        "@types/vscode": "^1.39.0",
+        "@types/which": "^1.3.2",
+        "tslint": "^5.16.0",
+        "typescript": "^3.5.1"
     }
 }
