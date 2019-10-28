@@ -16,6 +16,7 @@ Install `jiegec/decaf-lsp` into your path.
 * Syntax highlighting
 * Autoclosing brackets/quotes
 * Syntax diagnostics
-* Document symbols
+* Document/workspace symbols
+* Symbol hover
 
 ![](images/screenshot.png)
